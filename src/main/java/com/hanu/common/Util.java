@@ -21,7 +21,7 @@ public class Util {
 
     public static void sleepSeconds(int seconds) {
         try {
-            Thread.sleep(Duration.ofSeconds(seconds));
+            Thread.sleep(Duration.ofSeconds(seconds).toMillis());
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }

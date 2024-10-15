@@ -1,6 +1,7 @@
 package com.hanu.sec3;
 
 import com.hanu.common.SubscriberCommonImpl;
+import com.hanu.common.Util;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
@@ -9,7 +10,7 @@ public class MonoFromCallable {
     public static void main(String[] args) {
         var fromCallable = Mono.fromCallable(() -> getSum(List.of(1, 2, 3, 4, 5)));
         fromCallable.subscribe(
-                new SubscriberCommonImpl<>("MonoFromCallable")
+                Util.subscriber("MonoFromCallable")
         );
         var fromSupplier = Mono.fromSupplier(() -> {
             try {

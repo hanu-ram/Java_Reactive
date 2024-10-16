@@ -28,6 +28,7 @@ public class MonoFromRunnable {
 //        return Mono.empty(); // In Some scenarios we may need to return empty Mono because user less user experience. User might want to know what is the product Id he searched. So, instead of returning empty we can atleast display the product id that is not available.
         return Mono.fromRunnable(() -> notifyUser(id));
     }
+
     private static void notifyUser(int id) {
         log.warn("User Notified with the product id {}", id);
     }

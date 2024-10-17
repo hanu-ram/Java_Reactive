@@ -1,4 +1,4 @@
-package com.hanu.sec3.client;
+package com.hanu.sec2.client;
 
 import com.hanu.common.Util;
 import lombok.extern.slf4j.Slf4j;

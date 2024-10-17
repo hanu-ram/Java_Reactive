@@ -1,4 +1,4 @@
-package com.hanu.sec3;
+package com.hanu.sec2;
 
 import com.hanu.common.Util;
 import lombok.extern.slf4j.Slf4j;
@@ -9,7 +9,8 @@ import java.util.List;
 @Slf4j
 public class MonoDefer {
     public static void main(String[] args) {
-        createPublisher();
+        Mono.defer(MonoDefer::createPublisher) // if we use Mono.defer(), it will get into the createPublisher method if there is subscriber so we can achive lazy loading.
+                .subscribe(Util.subscriber());
     }
     private static Mono<Integer> createPublisher() {
         log.info("Inside createPublisher method");

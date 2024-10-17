@@ -1,4 +1,4 @@
-package com.hanu.sec3;
+package com.hanu.sec2;
 
 import com.github.javafaker.Faker;
 import com.hanu.common.SubscriberCommonImpl;

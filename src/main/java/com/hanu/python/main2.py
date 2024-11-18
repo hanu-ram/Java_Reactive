@@ -80,8 +80,8 @@ _data_file_name = ".data.csv"
 if os.path.exists(_data_file_name):
     with open(_data_file_name, "r+") as csv_file:
         next(csv_file)
-        for line in csv_file:
-            print(line)
+    for line in csv_file:
+        print(line)
 else:
     print(f"File: {_data_file_name} doesn't exist")
 
@@ -119,4 +119,3 @@ print(len(jokes))
 
 for j in jokes:
     print(j)
-

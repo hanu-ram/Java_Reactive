@@ -260,5 +260,5 @@ def printw(*args):
 
 printw(*fkadjf)
 test = []
-test.append()
+# test.append()
 print(test)

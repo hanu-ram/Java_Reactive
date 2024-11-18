@@ -14,7 +14,7 @@ public class ReactiveTimer {
                 .timeout(Duration.ofSeconds(1), fallback());
         productName
 //                .onErrorReturn("Laptop") // we can handle using onError methods as well
-                .timeout(Duration.ofMillis(500)) // this is closest to the subscriber thus this will take the effect. and the timeout millis or secs should be less than the other higher timeout won't work because above timeout is throwing the exception
+//                .timeout(Duration.ofMillis(500)) // this is closest to the subscriber thus this will take the effect. and the timeout millis or secs should be less than the other higher timeout won't work because above timeout is throwing the exception
                 .subscribe(Util.subscriber());
         Util.sleepSeconds(5);
     }
